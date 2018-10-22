@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Google Map</title>
+
     <style>
     #map{
         height: 400px;
@@ -17,34 +18,9 @@
     <h1>My google map</h1>
     <h2>Click on the marker to see description</h2>
     <div id="map"></div>
-    <script>
-        function initMap(){
-            let options = {
-                zoom: 8,
-                center: {lat: 33.748997, lng: -84.387985}
-            }
-            let map = new google.maps.Map(document.getElementById('map'), options);
+    <script src='configure.js'></script>
 
-            //Add marker
-            let marker = new google.maps.Marker({
-                position: {lat:33.8487, lng: -84.3733},
-                map:map,
-                // icon: ''
-            });
-
-            let infoWindow = new google.maps.InfoWindow({
-                content: '<h1>Our school ❤️</h1>'
-            });
-
-            marker.addListener('click', function(){
-                infoWindow.open(map, marker);
-            });
-
-        }
-        let YOUR_API_KEY = `AIzaSyC0SDTDQReYlooKFh2-m8grUeFwjfE1wCM`;
-    </script>
+</script>
+    <script src='index.js'></script>
 </body>
-    <script async defer
-        src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC0SDTDQReYlooKFh2-m8grUeFwjfE1wCM&callback=initMap'>
-    </script>
 </html>
